@@ -1,0 +1,154 @@
+
+/* FLEX MIXINS*/
+
+@mixin flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin flexStart {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  @mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin flex($dir,$jc,$ai){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $ai;
+  }
+
+  /*animations*/
+
+  @mixin ghost{
+    animation: ghost 5s ease-in-out 0.66s infinite normal none running ;
+    @keyframes ghost {
+      0%{opacity: 0.9;};
+      50%{opacity: 0.1;};
+      100%{opacity: 0.9;};
+    }  
+  }
+
+
+  @mixin noGravity{
+    animation: noGravity 3.5s ease-in-out 0s infinite normal none running ;
+
+    @keyframes noGravity {
+      0%{transform: translate(0px)};
+      50%{transform: translate(-5px, -5px)};
+      100%{transform: translate(0px)};
+    }
+  }
+
+  @mixin bouncing{
+
+
+      animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
+
+      @keyframes bouncing {
+        0% {transform: translate(0px)};
+        50% {transform: translate(5px, 10px)};
+        100% {transform: translate(0px)};
+    }
+  }
+
+  @mixin onLoadTransition{
+
+    animation : onLoadTransition .5s ease-out 0s 1;
+
+    @keyframes onLoadTransition {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100%;
+      }
+    }
+    
+  }
+
+  @mixin onCloseTransition{
+
+    animation : onCloseTransition .5s ease-out 0s 1;
+
+    @keyframes onCloseTransition {
+      0% {
+        opacity: 100%;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+  }
+
+  @mixin topHidden{
+    animation: topHidden 0.2s ease 0s;
+  
+    @keyframes topHidden {
+      0%{top: 0};
+      100%{top: -126px ; z-index: -1;};
+    }
+  }
+
+  @mixin topViewed{
+    animation: topViewed 0.2s ease 0s;
+  
+    @keyframes topViewed {
+      0%{top: -126px};
+      100%{top: 0;};
+    }
+  }
+
+  @mixin mobileModalIn{
+    animation: mobileModalIn 0.5s ease 0s;
+
+    @keyframes mobileModalIn {
+      0%{bottom:-400px;opacity: 0;}
+      100%{bottom:0;opacity: 100%;}
+    }
+  }
+
+  @mixin mobileModalOut{
+    animation: mobileModalOut 0.5s ease 0s;
+
+    @keyframes mobileModalOut {
+      0%{bottom:0;opacity: 100%;}
+      100%{bottom:-400px;opacity: 0;}
+    }
+  }
+
+@mixin mobileMenuIn {
+
+  animation: mobileMenuOut 0.1s ease 0s;
+
+  @keyframes mobileMenuOut {
+    0%{height: 0;opacity: 0;}
+    100%{height:100%;opacity: 100%;}
+  }
+}
+
+@mixin mobileMenuOut {
+
+  animation: mobileMenuOut 0.1s ease 0s;
+
+  @keyframes mobileMenuOut {
+    0%{height:0;opacity: 0;}
+    100%{height: 100%;opacity: 1000%;}
+  }
+}
+
+
+
+
+
+
+

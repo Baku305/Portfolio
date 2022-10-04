@@ -1,0 +1,9 @@
+.nav{
+ @include flexCenter;
+ height: 50px;
+ background-color: cornflowerblue;
+ gap:10px;
+ .navElement{
+
+ }
+}
